@@ -1,107 +1,171 @@
-<div align="center">
+# Task Manager App (Flutter + Firebase)
 
-Task Manager App (Flutter + Firebase)
+<p align="center">
+A full-stack cross-platform Task Manager application built with Flutter and Firebase, featuring real-time synchronization, CRUD operations, and cloud-based state management.
+</p>
 
-A full-stack mobile Task Manager application demonstrating real-time sync, CRUD operations, and cloud state management.
+---
 
-</div>
+## Badges
 
-Project Overview
+<p align="left">
+  <img src="https://img.shields.io/badge/Flutter-Framework-blue" />
+  <img src="https://img.shields.io/badge/Firebase-Backend-orange" />
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-green" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" />
+</p>
 
-The objective of this project is to provide a clean and efficient interface for managing daily tasks. It connects to a backend database to ensure data persists across sessions and synchronizes instantly between devices.
+---
 
-Features
+## Project Overview
 
-Real-Time Synchronization: Tasks update instantly across all devices using Firestore Streams.
+The **Task Manager App** is designed to provide a clean and efficient interface for managing daily tasks.  
+It leverages **Firebase Cloud Firestore** to ensure persistent data storage, real-time updates across devices, and a seamless cross-platform experience.
 
-Create Tasks: Add new tasks with a title, detailed description, and a specific due date.
+This project demonstrates strong fundamentals in Flutter UI development, cloud database integration, and real-time state synchronization.
 
-Edit Tasks: Modify existing task details.
+---
 
-Delete Tasks: Permanently remove tasks from the database.
+## Features
 
-Status Management: Mark tasks as "Completed" or "Pending" using a checkbox interface.
+- Real-time task synchronization using Firestore streams
+- Create tasks with title, description, and due date
+- Edit existing tasks
+- Delete tasks permanently from the database
+- Mark tasks as Completed or Pending
+- Cross-platform support for Android and Web
 
-Cross-Platform Support: Optimized for both Android and Web.
+---
 
-Tech Stack
+## Screenshots
 
-Component
+### Home Screen – Task List
+Displays all tasks with real-time updates and completion status.
 
-Technology
+![Home Screen](screenshots/home_screen.png)
 
-Frontend
+---
 
-Flutter (Dart)
+### Create Task Screen
+Interface for adding a new task with title, description, and due date.
 
-Backend
+![Create Task](screenshots/create_task.png)
 
-Firebase Cloud Firestore (NoSQL)
+---
 
-State Management
+### Firebase Firestore Console
+Real-time task data stored and synchronized using Cloud Firestore.
 
-Streams & setState
+![Firebase Console](screenshots/firebase_console.png)
 
-Dependencies
+---
 
-firebase_core: Initialization of Firebase services.
+## Demo Video
 
-cloud_firestore: Database management.
+### Full App Walkthrough
 
-intl: Date formatting and handling.
+```text
+videos/task_manager_demo.mp4
+````
 
-Installation and Setup
+---
 
-Follow these steps to run the project locally.
+## Tech Stack
 
-1. Clone the Repository
+| Layer            | Technology                       |
+| ---------------- | -------------------------------- |
+| Frontend         | Flutter (Dart)                   |
+| Backend          | Firebase Cloud Firestore (NoSQL) |
+| State Management | Streams & setState               |
+| Platforms        | Android, Web                     |
 
-git clone [https://github.com/Muhammad-Adnan-Dev/Task-Manager-App-Flutter-and-firebase.git](https://github.com/Muhammad-Adnan-Dev/Task-Manager-App-Flutter-and-firebase.git)
+---
+
+## Dependencies
+
+* firebase_core
+* cloud_firestore
+* intl
+
+---
+
+## Installation & Setup
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Muhammad-Adnan-Dev/Task-Manager-App-Flutter-and-firebase.git
 cd Task-Manager-App-Flutter-and-firebase
+```
 
+---
 
-2. Install Dependencies
+### Install Dependencies
 
+```bash
 flutter pub get
+```
 
+---
 
-3. Firebase Configuration
+### Firebase Configuration
 
-For Android:
+#### Android
 
-Create a project in the Firebase Console.
+1. Create a project in the Firebase Console
+2. Add an Android app using your package name (android/app/build.gradle)
+3. Download google-services.json
+4. Place it in android/app/
+5. Enable Firestore in Test Mode for development
 
-Add an Android app with your package name (found in android/app/build.gradle).
+---
 
-Download the google-services.json file.
+#### Web
 
-Place the file in the android/app/ directory.
+Firebase web configuration keys are already included in main.dart.
+No additional setup is required.
 
-Ensure your Firestore Database is set to "Test Mode" for development access.
+---
 
-For Web:
-The application code includes configuration keys for the web interface in main.dart. No additional file setup is required for the web version in this specific build.
+### Run the Application
 
-4. Run the Application
+**Android Emulator**
 
-To run on an Android Emulator:
-
+```bash
 flutter run
+```
 
+**Web (Chrome)**
 
-To run on Chrome (Web):
-
+```bash
 flutter run -d chrome
+```
 
+---
 
-Folder Structure
+## Folder Structure
 
-lib/main.dart: Contains the entry point and all screen logic (Home Screen, Add/Edit Screen).
+```text
+lib/
+ └── main.dart
+android/
+screenshots/
+videos/
+pubspec.yaml
+```
 
-pubspec.yaml: Manages project dependencies.
+---
 
-android/: Contains Android-specific configuration files.
+## License
 
-License
+This project is licensed under the MIT License.
 
-This project is open-source and available under the MIT License.
+---
+
+## Author
+
+**Muhammad Adnan**
+GitHub: [https://github.com/Muhammad-Adnan-Dev](https://github.com/Muhammad-Adnan-Dev)
+
+```
+```
